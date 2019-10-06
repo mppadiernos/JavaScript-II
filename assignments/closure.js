@@ -5,8 +5,9 @@
 // The outer scope can be a parent function, or the top level of the script.
 
 const fave = 'Ministry of Souls';
+const band = 'Dream Theater';
 function dt() {
-    const band = 'Dream Theater';
+
     function displayFave() {
         console.log( `My fave is ${band}'s ${fave}`);
     }
