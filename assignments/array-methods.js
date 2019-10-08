@@ -90,7 +90,7 @@ console.log(listDonations);
 
 // Problem 3
 function contains(who, list, cb) {
-  return cb(list.indexOf(who.first_name) !== who.first_name);
+  return cb(list.includes(who.first_name) !== who.first_name);
 }
 contains('Andrea', highDonations, whosit => {
   console.log(whosit);
