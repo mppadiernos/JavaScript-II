@@ -70,12 +70,9 @@ console.log(firstNamesAllCaps);
 // The large shirts won't be available for the event due to an ordering issue. We need a filtered version of the runners array, containing only those runners with large sized shirts so they can choose a different size. This will be an array of objects.
 let runnersLargeSizeShirt = runners.filter((size) => size.shirt_size === 'L');
 console.log(runnersLargeSizeShirt);
-
 // ==== Challenge 4: Use .reduce() ====
 // The donations need to be tallied up and reported for tax purposes. Add up all the donations and save the total into a ticketPriceTotal variable.
-let ticketPriceTotal = runners.reduce((total, price) => {
-  return total + price.donation;
-},0);
+let ticketPriceTotal = runners.reduce((total, price) => total + price.donation, 0);
 console.log(ticketPriceTotal);
 
 // ==== Challenge 5: Be Creative ====
@@ -92,3 +89,9 @@ let listDonations = donations.sort(function(a, b){return b - a});
 console.log(listDonations);
 
 // Problem 3
+function contains(who, list, cb) {
+  return cb(list.indexOf(who.first_name) !== who.first_name);
+}
+contains('Andrea', highDonations, whosit => {
+  console.log(whosit);
+});
