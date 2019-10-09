@@ -4,6 +4,16 @@
 // that manipulates variables defined in the outer scope.
 // The outer scope can be a parent function, or the top level of the script.
 
+const fave = 'Ministry of Souls';
+const band = 'Dream Theater';
+function dt() {
+
+    function displayFave() {
+        console.log( `My fave is ${band}'s ${fave}`);
+    }
+    return displayFave();
+}
+dt();
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
